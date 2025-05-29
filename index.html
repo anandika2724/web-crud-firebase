@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD Siswa - Firebase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Data Siswa Refleksi</h1>
+
+  <form id="siswaForm">
+    <input type="text" id="nama" placeholder="Nama Siswa" required />
+    <input type="text" id="pesan" placeholder="Pesan Refleksi" required />
+    <button type="submit">Simpan</button>
+  </form>
+
+  <div id="dataContainer"></div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <!-- Konfigurasi Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "ISI_API_KEY_ANDA",
+      authDomain: "PROJECT.firebaseapp.com",
+      databaseURL: "https://PROJECT.firebaseio.com",
+      projectId: "PROJECT",
+      storageBucket: "PROJECT.appspot.com",
+      messagingSenderId: "XXXX",
+      appId: "APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Skrip CRUD -->
+  <script src="script.js"></script>
+</body>
+</html>
